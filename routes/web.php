@@ -23,3 +23,4 @@ Route::get('/create','VehicleController@create');
 Route::post('/','VehicleController@store');
 Route::get('/{id}','VehicleController@show');
 Route::post('/{id}','VehicleController@update');
+Route::delete('/{id}','VehicleController@destroy');

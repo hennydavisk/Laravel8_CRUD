@@ -47,5 +47,9 @@ class VehicleController extends Controller
         return redirect('/');
     }
 
-    
+    public function destroy($id){
+        $vehicle = Vehicle::findOrFail($id);
+        $vehicle->delete();
+        return redirect('/');
+    }
 }

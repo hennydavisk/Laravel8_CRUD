@@ -26,7 +26,13 @@
         <button> Edit </button>
         </form>
       </td>
-      <td> <button> DELETE </button> </td>
+      <td> 
+        <form action="/{{$vehicle -> id}}" method="POST">
+        @csrf
+        @method('DELETE')
+        <button> Delete </button>
+        </form>
+      </td>
     </tr> 
     @endforeach
   </tbody>
