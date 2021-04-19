@@ -28,4 +28,24 @@ class VehicleController extends Controller
         
         return redirect('/');
     }
+
+    public function show($id){
+
+        $vehicle = Vehicle::findOrFail($id);
+        // error_log($vehicle);
+        return view('products.show',['vehicle'=>$vehicle]);
+    }
+
+    public function update($id){
+
+        $vehicle = Vehicle::findOrFail($id);
+        $vehicle -> car = request('car');
+        $vehicle -> code = request('code');
+        $vehicle -> country = request('country');
+        $vehicle -> save();
+        // error_log($vehicle);
+        return redirect('/');
+    }
+
+    
 }

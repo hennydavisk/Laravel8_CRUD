@@ -21,3 +21,5 @@ Route::get('/', function () {
 Route::get('/','VehicleController@index');
 Route::get('/create','VehicleController@create');
 Route::post('/','VehicleController@store');
+Route::get('/{id}','VehicleController@show');
+Route::post('/{id}','VehicleController@update');

@@ -20,7 +20,12 @@
       <td> {{ $vehicle -> car}} </td>
       <td> {{ $vehicle -> code}} </td>
       <td> {{ $vehicle -> country}} </td>
-      <td> <button>EDIT </button> </td>
+      <td> 
+        <form action="/{{$vehicle->id}}" method="GET">
+        @csrf
+        <button> Edit </button>
+        </form>
+      </td>
       <td> <button> DELETE </button> </td>
     </tr> 
     @endforeach
