@@ -26,7 +26,14 @@
     @endforeach
   </tbody>
 </table>
+</br> 
+<div style="float: right">
+<a href="/create"> Add a new product</a>
+</div> 
+
 </div>
+
+
 
 </div>
 

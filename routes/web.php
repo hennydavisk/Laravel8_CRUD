@@ -19,3 +19,5 @@ Route::get('/', function () {
 
 
 Route::get('/','VehicleController@index');
+Route::get('/create','VehicleController@create');
+Route::post('/','VehicleController@store');
